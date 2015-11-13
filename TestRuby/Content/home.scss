@@ -1,0 +1,288 @@
+﻿$text-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
+
+body[data-controller="Home"][data-view="Index"] {
+    background-color: $primary-background-color;
+    color: $primary-text-color;
+
+    .body-content {
+        margin: 0;
+    }
+
+    $top-size: 60px;
+    .jumbotron {
+        background: url(/Content/Images/home-background.jpg);
+        background-size: cover;
+        height: calc(100% - #{$top-size});
+        max-height: 800px;
+        display: table;
+        width: 100%;
+        margin-bottom: 0;
+        margin-top: $top-size;
+
+        .middle {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .explanation {
+            font-size: 20px;
+            text-shadow: $text-shadow;
+
+            button {
+                text-shadow: $text-shadow;
+            }
+
+            .button-container {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .jumbotron {
+            background-position-x: -200px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .jumbotron h1 {
+            font-size: 36px;
+            text-shadow: $text-shadow;
+        }
+    }
+
+    section {
+        position: relative;
+        padding-top: 100px !important; // TODO Work with the @media query
+        padding-bottom: 100px;
+
+        h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    section.container {
+        width: 100%;
+    }
+
+    .boost-productivity {
+        background-color: #fff;
+        color: #666;
+        box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.15);
+
+        .title {
+            font-family: 'Raleway';
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        ul {
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        li {
+            text-align: center;
+            list-style: none;
+            margin-top: 40px;
+        }
+    }
+
+    $notepad-width: 560px;
+    $notepad-small-width: 345px;
+    .automate-and-simplify {
+        background-color: #666666;
+        padding-bottom: 0;
+
+        .button-container {
+            list-style: none;
+            display: inline-block;
+            margin: 50px 0;
+            padding: 0;
+
+            li {
+                float: left;
+                margin-right: 12px;
+                margin-top: 10px;
+
+                button {
+                    width: 100px;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .code-container {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        img {
+            margin: auto;
+            box-shadow: 0 -7px 25px rgba(0, 0, 0, 0.15);
+        }
+    
+        pre {
+            display: inline-block;
+            position: absolute;
+            text-align: left;
+            margin: 0;
+            top: 0;
+            left: 50%;
+            background-color: transparent;
+            border: none;
+
+            code {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .code-container {
+            position: relative;
+
+            > div {
+                display: none;
+        
+                &.active {
+                    display: block;
+                }
+
+                .hidden-xs {
+                    img {
+                        width: $notepad-width;
+                    }
+                }
+
+                .hidden-sm {
+                    img {
+                        width: $notepad-small-width;
+                    }
+                }
+            }
+        }
+
+        .php {
+            pre {
+                padding: 42px 12px;
+                margin-left: 0;
+                left: 0;
+
+                @media (min-width: 393px) { /* $notepad-small-width + 12px * 4 */
+                    margin-left: calc(-#{$notepad-small-width} / 2);
+                    left: 50%;
+                }
+
+                @media (min-width: 768px) {
+                    margin-left: calc(-#{$notepad-width} / 2);
+                    left: 50%;
+                }
+            }
+        }
+
+        .dotnet {
+            pre {
+                margin-left: calc(-#{$notepad-small-width} / 2);
+                padding: 20px 16px;
+                color: white;
+            
+                @media (min-width: 409px) { /* $notepad-small-width + 16px * 4 */
+                    margin-left: calc(-#{$notepad-small-width} / 2);
+                    left: 50%;
+                    font-size: 0.9em;
+                }
+
+                @media (min-width: 768px) {
+                    margin-left: calc(-#{$notepad-width} / 2);
+                    left: 50%;
+                }
+            }
+        }
+
+        .nodejs {
+        }
+    }
+
+    .reliable-resources {
+        background-color: #fff;
+        color: #666;
+
+        ul {
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        li {
+            text-align: center;
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .hover-pill {
+            button {
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+    .process-quickly {
+        background-color: #666666;
+
+        @media (min-width: 992px) {
+            min-height: 535px;
+        }
+
+        box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+        z-index: 1;
+
+        .hand-container-container {
+            position: static;
+        }
+
+        .choose-your-barcode {
+            margin-top: 25px;
+        }
+
+        .hand-container {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: 335px;
+            height: 699px;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                width: 335px;
+                transition: top ease-out .8s;
+                top: -699px;
+
+                &.animated {
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    $barcode-size: 200px;
+    .barcode-format {
+        background-color: #33cc66;
+        color: #fff;
+
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+    }
+}

@@ -1,0 +1,267 @@
+﻿$text-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
+
+body[data-controller="Purchase"][data-view="Index"] {
+    section {
+        margin-top: 70px;
+    }
+
+    h2 {
+        margin-bottom: 45px;
+        font-size: 30px;
+        font-family: "Raleway";
+        font-weight: normal;
+    }
+
+    .row {
+        list-style: none;
+
+        li {
+            margin-bottom: 20px;
+        }
+    }
+
+    .step-1 {
+        .barcode-list a {
+            border-color: #666;
+
+            &:hover {
+                background-color: rgba(102, 102, 102, 0.1);
+            }
+        }
+
+        .content .title {
+            color: #666;
+        }
+    }
+
+    .step-3 {
+        .description.details {
+            font-size: 0.8em;
+            visibility: hidden;
+        }
+
+        li:hover .description.details {
+            visibility: visible;
+        }
+    }
+
+    .cart-items {
+        .cart-item-container {
+            border: 2px solid #666;
+            border-radius: 4px;
+            padding: 15px;
+
+            .img-container {
+                display: table-cell;
+                vertical-align: middle;
+                height: 105px;
+                width: 1%;
+
+                img {
+                    max-height: 105px;
+                }
+            }
+
+            .img-container, .symbology, .license {
+                margin-bottom: 50px;
+            }
+
+            .symbology {
+                height: 70px;
+                font-size: 24px;
+            }
+
+            .price {
+                font-size: 18px;
+            }
+        }
+
+        .remove {
+            visibility: hidden;
+            margin: 15px auto 30px;
+
+            a {
+                font-size: 0.8em;
+            }
+        }
+
+        li:hover {
+            .remove {
+                visibility: visible;
+            }
+        }
+    }
+
+
+    h3 {
+        border-bottom: 2px solid #666;
+        width: 30%;
+        margin: auto;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+    }
+
+    h3, .final-price {
+        font-size: 24px;
+    }
+
+    .total, .action {
+        margin-top: 24px;
+    }
+
+    .btn {
+        font-size: 24px;
+        font-weight: normal;
+    }
+
+    .section-appear,
+    .section-enter {
+      opacity: 0.01;
+    }
+
+    .section-appear.section-appear-active,
+    .section-enter.section-enter-active {
+      opacity: 1;
+      transition: opacity .5s ease-in;
+    }
+}
+
+body[data-controller="Purchase"][data-view="Payment"] {
+    .total {
+        text-align: right;
+    }
+
+    .payment_choices ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 16px;
+
+            a {
+                color: #666;
+                text-decoration: none;
+            }
+        }
+
+        img {
+            float: left;
+            margin-right: 12px;
+        }
+
+        .title {
+            margin-top: 12px;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 20px;
+        }
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+
+    h3 {
+        font-family: "Raleway";
+        font-size: 24px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    .selection_made {
+        li {
+            opacity: .2
+        }
+
+        li.selected {
+            opacity: 1;
+        }
+    }
+
+    .payment_options .payment_option {
+        display: none;
+    }
+
+    .table.purchase {
+        border-collapse: collapse;
+
+        td, th {
+            border: 2px solid $table-border-color;
+            color: $table-border-color;
+        }
+
+        th {
+            background-color: #666;
+            font-weight: normal;
+            font-size: 20px;
+        }
+
+        tbody tr {
+            td {
+                background-color: #999;
+            }
+        }
+
+        tfoot {
+            td {
+                color: #444;
+            }
+        }
+
+        .details {
+            font-size: 0.8em;
+
+            a {
+                color: $table-border-color;
+            }
+        }
+    }
+
+    #billing_same {
+        font-weight: normal;
+        font-size: 14px;
+        margin-left: 24px;
+    }
+
+    .expiration-month, .expiration-year {
+        display: inline-block;
+        width: auto;
+    }
+
+    .return-policy {
+        margin-top: 32px;
+        font-size: 12px;
+    }
+
+    label.control-label {
+        font-size: 16px;
+    }
+
+    label {
+        font-weight: normal;
+    }
+
+    .card-not-charged {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+    .data-review {
+        display: none;
+    }
+
+    &.reviewing {
+        .data-review.alert {
+            margin-top: 20px;
+        }
+
+        .data-review {
+            display: block;
+        }
+
+        .data-entry {
+            display: none;
+        }
+    }
+}

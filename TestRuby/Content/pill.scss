@@ -1,0 +1,50 @@
+﻿$pill-size: 155px;
+$pill-spacing: 20px;
+$pill-top-spacing: 60px;
+
+.pill-container {
+    .pill {
+        display: inline-block;
+        position: relative;
+        margin: $pill-spacing 0;
+
+        .shadow {
+            width: $pill-size;
+            height: $pill-size;
+            box-shadow: 0 14px 15px rgba(0, 0, 0, .20);
+            border-radius: $pill-size;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        img {
+            width: $pill-size;
+            height: $pill-size;
+        }
+
+        + .description {
+            margin: auto;
+            margin-top: 25px;
+            width: $pill-size;
+        }
+
+        &[data-pill-click] {
+            cursor: pointer;
+        }
+    }
+
+    .description + .description {
+        margin-top: 12px;
+    }
+
+    /*
+    .description {
+        min-height: 60px;
+    }
+
+        .description {
+        margin-bottom: $pill-top-spacing;
+    }
+        */
+}

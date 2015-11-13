@@ -1,0 +1,75 @@
+﻿/*
+Style by jsgoupil
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs.php {
+    color: #adbac6;
+
+    .hljs-variable {
+        color: #9a83ad;
+        font-weight: bold;
+    }
+
+    .hljs-keyword {
+        color: #cf8940;
+        font-weight: bold;
+    }
+
+    .hljs-string {
+        color: #758e66;
+    }
+
+    .hljs-number {
+        color: #76a4c4;
+    }
+
+    .hljs-preprocessor {
+        color: #F9BCBC;
+    }
+
+    &.white {
+        color: #0000BB;
+
+        .hljs-variable {
+            color: #0000bb;
+        }
+
+        .hljs-string {
+            color: #DD0000;
+        }
+
+        .hljs-preprocessor {
+            color: #0000BB;
+        }
+
+        .hljs-keyword {
+            color: #007700
+        }
+    }
+}
+.hljs.cs {
+    color: #dcdcdc;
+
+    .hljs-keyword {
+        color: #4c9ad3;
+    }
+
+    .hljs-string {
+        color: #d69d85;
+    }
+
+    .hljs-comment {
+        color: #57a64a;
+    }
+
+    .hljs-number {
+        color: #93c597;
+    }
+}

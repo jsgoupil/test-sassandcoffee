@@ -1,0 +1,44 @@
+﻿$button-text-color: #fff;
+$button-border-color: #fff;
+
+.btn {
+    font-family: 'Raleway';
+    font-weight: 600;
+    border-width: 2px;
+    font-size: 18px;
+
+    &:active, &.active {
+        box-shadow: none;
+
+        &:focus {
+            outline-color: #66D780;
+        }
+    }
+
+    &:focus {
+        outline-color: #66D780;
+    }
+}
+
+.btn-default {
+    color: $button-text-color;
+    border-color: $button-border-color;
+    background-color: transparent;
+
+    &:hover, &:active, &:focus, &.active {
+        background: rgba(255, 255, 255, 0.5);
+        color: $button-text-color;
+        border-color: $button-border-color;
+    }
+}
+
+.light-background {
+    .btn-default {
+        color: #666;
+        border-color: #666;
+
+        &:hover, &.active {
+            background-color: rgba(102, 102, 102, .1);
+        }
+    }
+}

@@ -1,0 +1,50 @@
+﻿$barcode-size: 200px;
+
+.barcode-list {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 20px;
+        list-style: none;
+    }
+
+    a {
+        border: 2px solid #fff;
+        width: $barcode-size;
+        height: $barcode-size;
+        text-align: center;
+        display: block;
+        border-radius: 10px;
+        box-sizing: border-box;
+        display: table;
+        margin: auto;
+
+        .content {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        img {
+            max-width: 105px;
+            max-height: 105px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        &:hover, &:active, &:focus {
+            background: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+        }
+
+        &.active {
+            background: rgba(102, 102, 102, 0.1);
+        }
+    }
+}

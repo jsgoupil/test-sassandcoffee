@@ -1,0 +1,115 @@
+﻿$primary-color: #4D4D4D;
+$menu-highlight: #66D780;
+$text-color: #F4F4F4;
+$text-color-hover: #fff;
+$margin-spacing-logo: 10px;
+
+.navbar-site {
+    &.navbar {
+        border-radius: 0;
+        border: 0;
+        margin-bottom: 0;
+        font-family: 'Raleway';
+        font-weight: 600;
+    }
+
+    &.navbar-default {
+        background-color: $primary-color;
+
+        .navbar-brand {
+            color: $text-color;
+            font-family: 'United Sans', sans-serif;
+            font-weight: bold;
+            height: 60px;
+            margin-left: 5px;
+
+            > img {
+                display: inline-block;
+                width: 55px; // IE11 will get a decimal size and will not display the inline-block properly.
+            }
+
+            &:hover, &:active, &:focus {
+                color: $text-color-hover;
+            }
+        }
+
+        .navbar-collapse {
+            line-height: 0;
+
+            @media (min-width: 768px) {
+                text-align: center;
+            }
+        }
+
+        .navbar-nav {
+            @media (min-width: 768px) {
+                display: inline-block;
+                float: none;
+                margin-left: -150px; // To align horizontally.
+            }
+
+            > li {
+                margin-left: 15px;
+                margin-right: 15px;
+
+                > a {
+                    color: $text-color;
+
+                    border-left: 5px solid transparent;
+                    padding-left: 8px;
+
+                    @media (min-width: 768px) {
+                        border-left: none;
+                        border-bottom: 5px solid transparent;
+                        padding-left: 0;
+                    }
+
+                    text-transform: uppercase;
+                    padding-right: 0;
+
+                    &.active, &:hover, &:focus {
+                        color: $text-color;
+                        
+                        border-left: 5px solid $menu-highlight;
+                        @media (min-width: 768px) {
+                            border-left: none;
+                            border-bottom: 5px solid $menu-highlight;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-brand {
+        padding: 0;
+
+        img {
+            height: 50px;
+            margin-top: -($margin-spacing-logo * 2);
+        }
+
+        .logo-text {
+            display: inline-block;
+            margin-top: $margin-spacing-logo;
+            padding-left: 3px;
+
+            span {
+                display: block;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .navbar-nav > li > a {
+            padding-top: 18px;
+            padding-bottom: 17px;
+        }
+
+        &.navbar > .container-fluid .navbar-brand {
+            margin-left: -10px;
+        }
+    }
+}

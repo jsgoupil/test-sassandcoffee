@@ -1,0 +1,15 @@
+﻿$button-text-color: #fff;
+$button-border-color: #fff;
+
+.form-control {
+    border-width: 2px;
+    color: #666;
+    border-color: #666;
+}
+
+.light-background {
+    .form-control {
+        color: #666;
+        border-color: #666;
+    }
+}
